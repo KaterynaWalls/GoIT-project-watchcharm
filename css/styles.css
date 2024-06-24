@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  display: flex;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mobi-menu {
+  max-width: 200px;
+  max-height: 812px;
+  background: rgba(12, 12, 12, 0.92);
+  background: rgba(12, 12, 12, 0.92), url("path_to_image");
+}
+.mobi-menu-wrap {
+  padding: 240px 40px 40px;
+}
+.mobi-menu-list {
+  flex-direction: column;
+  gap: 24px;
+  /* margin: 0 auto; */
+}
+.mobi-menu-item {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  text-align: center;
+  color: #fbfbfb;
+}
+.mobi-social-wrap {
+}
+.mobi-social-list {
+}
+.mobi-social-item {
+}

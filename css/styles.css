@@ -105,7 +105,19 @@ img {
 }
 
 .mobi-menu-link {
+  display: flex;
+  margin-bottom: 2px;
   color: #fbfbfb;
+
+}
+
+.mobi-menu-circle {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3350e9;
+  margin: 0 auto;
 }
 
 .mobi-social-wrap {

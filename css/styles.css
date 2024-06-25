@@ -29,8 +29,8 @@ img {
 }
 
 .section {
-max-width: 768px;
-background-color: transparent;
+  max-width: 768px;
+  /* background-color: transparent; */
 }
 
 .mobilebox {
@@ -39,9 +39,8 @@ background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 200px;
+  width: 160px;
   height: 100%;
-  /* background-color: #cccccc; */
   background-image: linear-gradient(
       rgba(12, 12, 12, 0.92),
       rgba(12, 12, 12, 0.92)
@@ -55,16 +54,13 @@ background-color: transparent;
     pointer-events: none; */
 }
 
-.mobi-menu {
-  /* background-color: #0d0d0d; */
-}
-
 .mobi-menu-container {
   display: flex;
   flex-direction: column;
   padding-top: 240px;
   margin-bottom: auto;
 }
+
 .mobi-menu-list {
   display: flex;
   align-items: center;
@@ -73,6 +69,7 @@ background-color: transparent;
   gap: 24px;
   /* margin: 0 auto; */
 }
+
 .mobi-menu-item {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
@@ -81,18 +78,22 @@ background-color: transparent;
   /* text-align: center; */
 }
 
+.mobi-menu-link:hover,
+.mobi-menu-link:focus {
+  color: #3350e9;
+}
+
 .mobi-menu-link {
   color: #fbfbfb;
 }
+
 .mobi-social-wrap {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
+  max-height: 34px;
 }
 .mobi-social-list {
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
   gap: 10px;
 }
 
@@ -100,15 +101,60 @@ background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(251, 251, 251, 0.1);
+  border: 2px solid rgba(251, 251, 251, 0.1);
   border-radius: 10px;
   width: 34px;
   height: 34px;
+  /* padding-top: 4px; */
 }
-
-/* .mobi-icon-link {
-} */
 
 .mobi-icon {
   fill: #fbfbfb;
+}
+
+/* -------- Close-btn  ---------- */
+
+.vector-container {
+  color: #000;
+  position: fixed;
+  top: 20px;
+  left: 146px;
+}
+
+.vector-label-btn {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  /* border: 1px solid #fbfbfb; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vector {
+  position: relative;
+}
+
+/* .vector-one, */
+.vector::before,
+.vector::after {
+  width: 24px;
+  height: 2px;
+  background-color: #fbfbfb;
+}
+
+.vector::before,
+.vector::after {
+  content: "";
+  position: absolute;
+  right: 0;
+}
+
+.vector::before {
+  /* top: 10px; */
+  transform: translateX(50%) rotate(-45deg);
+}
+
+.vector::after {
+  transform: translateX(50%) rotate(45deg);
 }

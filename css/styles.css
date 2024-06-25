@@ -46,14 +46,22 @@ img {
   overflow: hidden;
 }
 
-.mobilebox {
-  display: flex;
-  flex-direction: column;
+.mobi-section {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
-  width: 160px;
+  width: 100%;
   height: 100%;
+}
+
+.mobilebox {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   background-image: linear-gradient(
       rgba(12, 12, 12, 0.92),
       rgba(12, 12, 12, 0.92)
@@ -62,6 +70,9 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-width: 160px;
+  padding-top: 240px;
+  padding-bottom: 40px;
   /* opacity: 0;
     visibility: hidden;
     pointer-events: none; */
@@ -69,15 +80,12 @@ img {
 
 .mobi-menu-container {
   display: flex;
-  flex-direction: column;
-  padding-top: 240px;
+  justify-content: center;
   margin-bottom: auto;
 }
 
 .mobi-menu-list {
-  display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
   /* margin: 0 auto; */
@@ -103,7 +111,7 @@ img {
 .mobi-social-wrap {
   display: flex;
   justify-content: center;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   max-height: 34px;
 }
 .mobi-social-list {
@@ -127,15 +135,16 @@ img {
 
 /* -------- Close-btn  ---------- */
 
-.vector-container {
-  color: #000;
-  position: fixed;
+.vector-input-btn {
   top: 20px;
   left: 146px;
 }
 
 .vector-label-btn {
   display: flex;
+  position: absolute;
+  left: 146px;
+  top: 20px;
   width: 34px;
   height: 34px;
   /* border: 1px solid #fbfbfb; */
@@ -148,7 +157,6 @@ img {
   position: relative;
 }
 
-/* .vector-one, */
 .vector::before,
 .vector::after {
   width: 24px;

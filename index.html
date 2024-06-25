@@ -9,9 +9,19 @@
   <body>
     <!----------  mobileMenu --------->
 
-    <section class="section">
+    <section class="section mobi-section">
       <div class="container mobilebox is-open">
         <div class="mobi-menu-container">
+
+        <input
+          type="checkbox"
+          class="visually-hidden vector-input-btn"
+          name="btnClose"
+          id="toggle-close"
+        />
+        <label for="toggle-close" class="vector-label-btn">
+          <span class="vector"></span>
+        </label>
           <nav class="mobi-menu-nav">
             <ul class="mobi-menu-list">
               <li class="mobi-menu-item">
@@ -109,18 +119,6 @@
     </section>
 
     <!---------- END mobileMenu --------->
-
-    <div class="vector-container">
-      <input
-        type="checkbox"
-        class="visually-hidden"
-        name="btnClose"
-        id="toggle-close"
-      />
-      <label for="toggle-close" class="vector-label-btn">
-        <span class="vector"> </span>
-      </label>
-    </div>
 
     <!-- <button type="button" class="close-btn" data-modal-close>
         <svg width="8" height="8" class="modal-close-icon">

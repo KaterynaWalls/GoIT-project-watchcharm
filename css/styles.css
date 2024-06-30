@@ -32,6 +32,18 @@ img {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 65px;
+  }
+}
+
 .header {
   border-bottom: 1px solid rgba(12, 12, 12, 0.1);
 }
@@ -48,14 +60,6 @@ img {
     height: 92px;
   }
 }
-
-/* .header-container {
-  display: flex;
-  height: 88px;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1150px;
-} */
 
 .top-line-nav {
   display: none;
@@ -175,7 +179,6 @@ img {
   gap: 24px;
 }
 .mobi-menu-item {
-  font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 129%;

@@ -247,11 +247,15 @@ img {
 }
 
 .btn-close-container {
+  display: flex;
   width: 34px;
   height: 34px;
-  padding-top: 20px;
-  padding-right: 20px;
-  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
 /* .visually-hidden {
@@ -267,7 +271,7 @@ img {
   overflow: hidden;
 } */
 
-.mobi-section {
+/*.mobi-section {
   display: block;
   position: fixed;
   top: 0;
@@ -276,7 +280,7 @@ img {
   height: 100%;
 }
 
-/*.mobi-menu-list {
+.mobi-menu-list {
   align-items: center;
   flex-direction: column;
   gap: 24px;
@@ -340,7 +344,7 @@ img {
   left: 146px;
 } */
 
-.vector-label-btn {
+/* .vector-label-btn {
   display: flex;
   left: 146px;
   top: 20px;
@@ -351,46 +355,6 @@ img {
   cursor: pointer;
 }
 
-/* .vector {
-  position: relative;
-} */
-
-.vector::before,
-.vector::after {
-  width: 28px;
-  height: 2px;
-  background-color: #0c0c0c;
-}
-
-.vector::before,
-.vector::after {
-  content: "";
-  position: absolute;
-}
-
-.vector::before {
-  top: -4px;
-  /* transform: translateX(50%) rotate(-45deg); */
-}
-
-.vector::after {
-  top: 4px;
-  /* transform: translateX(50%) rotate(45deg); */
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .mobi-section {
   display: block;
   position: fixed;
@@ -398,7 +362,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 .mobilebox {
   display: flex;
@@ -417,11 +381,10 @@ img {
   background-size: cover;
   background-position: center;
   width: 200px;
-  padding-bottom: 40px;
+  min-height: 100vh;
   /* opacity: 0;
     visibility: hidden;
     pointer-events: none; */
-  min-height: 100vh;
 }
 
 .mobi-menu-container {
@@ -429,6 +392,8 @@ img {
   justify-content: center;
   flex-grow: 1;
   align-items: center;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 .mobi-menu-list {
@@ -493,32 +458,38 @@ img {
 
 /* -------- Close-btn  ---------- */
 
+/* .btn-close-container {
+  position: absolute;
+
+} */
+
 /* .vector-input-btn {
   top: 20px;
   left: 146px;
 } */
 
-/* .vector {
-  position: relative;
-} */
-
-.vector::before,
-.vector::after {
+.vector-close-btn,
+.vector-close-btn::before,
+.vector-close-btn::after {
   width: 28px;
   height: 2px;
-  background-color: #0c0c0c;
+  background-color: #fbfbfb;
 }
 
-.vector::before,
-.vector::after {
+.vector-close-btn::before,
+.vector-close-btn::after {
   content: "";
   position: absolute;
 }
 
-.vector::before {
-  transform: translateX(50%) rotate(-45deg);
+.vector-close-btn::before {
+  transform: rotate(-45deg);
 }
 
-.vector::after {
-  transform: translateX(50%) rotate(45deg);
+.vector-close-btn::after {
+  transform: rotate(45deg);
+}
+
+.vector-close-btn {
+  background-color: transparent;
 }

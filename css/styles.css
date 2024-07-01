@@ -198,11 +198,12 @@ img {
 
 /* -------- Close-btn  ---------- */
 
-.vector-input-btn {
+.vector-input-btn,
+.vector-input-close {
   appearance: none;
 }
 
-.vector-label-btn {
+/* .vector-label-btn {
   display: flex;
   left: 146px;
   top: 20px;
@@ -211,9 +212,9 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
+} */
 
-.vector-btn {
+/* .vector-btn {
   position: relative;
 }
 
@@ -234,17 +235,15 @@ img {
 
 .vector-btn::before {
   top: -4px;
-  /* transform: translateX(50%) rotate(-45deg); */
 }
 
 .vector-btn::after {
   top: 4px;
-  /* transform: translateX(50%) rotate(45deg); */
 }
 
 .vector-btn {
   background-color: transparent;
-}
+} */
 
 .btn-close-container {
   display: flex;
@@ -257,19 +256,6 @@ img {
   right: 20px;
   cursor: pointer;
 }
-
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
 
 /*.mobi-section {
   display: block;
@@ -337,7 +323,7 @@ img {
   fill: #fbfbfb;
 } */
 
-/* -------- Close-btn  ---------- */
+/* -------- Open-btn  ---------- */
 
 /* .vector-input-btn {
   top: 20px;
@@ -364,11 +350,12 @@ img {
   height: 100%;
 } */
 
+/* ========= Close Button   ============ */
+
 .mobilebox {
   display: flex;
   flex-direction: column;
   position: absolute;
-  /* left: 50%; */
   top: 0;
   right: 0;
   /* transform: translateX(-50%); */
@@ -399,20 +386,15 @@ img {
 .mobi-menu-list {
   align-items: center;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
 }
 
 .mobi-menu-item {
-  font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 129%;
   flex-shrink: 0;
-}
-
-.mobi-menu-link:hover,
-.mobi-menu-link:focus {
-  color: #3350e9;
+  padding: 3px 0;
 }
 
 .mobi-menu-link {
@@ -428,6 +410,15 @@ img {
   border-radius: 50%;
   background-color: #3350e9;
   margin: 0 auto;
+  opacity: 0;
+}
+
+.mobi-menu-item:hover .mobi-menu-link + .mobi-menu-circle {
+  opacity: 1;
+}
+
+.mobi-menu-item:focus .mobi-menu-link + .mobi-menu-circle {
+  opacity: 1;
 }
 
 .mobi-social-wrap {
@@ -452,21 +443,23 @@ img {
   height: 34px;
 }
 
-.mobi-icon {
+.mobi-social-item:hover .mobi-icon-link .mobi-icon,
+.mobi-social-item:focus .mobi-icon-link .mobi-icon {
   fill: #fbfbfb;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobi-social-item:hover,
+.mobi-social-item:focus {
+  border: 2px solid rgba(180, 180, 180, 0.781);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobi-icon {
+  fill: #cecece;
 }
 
 /* -------- Close-btn  ---------- */
-
-/* .btn-close-container {
-  position: absolute;
-
-} */
-
-/* .vector-input-btn {
-  top: 20px;
-  left: 146px;
-} */
 
 .vector-close-btn,
 .vector-close-btn::before,

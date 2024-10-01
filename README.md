@@ -1,1 +1,1 @@
-# GoIT-hw-07
+# GoIT-project-watchcharm
